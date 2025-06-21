@@ -20,5 +20,12 @@ func main() {
 	l := logger.New()
 
 	// Load Configuration
+	cfg, err := config.Load()
+	if err != nil {
+		l.Fatal().Err(err).Msg("Failed to load configuration")
+	}
+
+	// Initialize database connection
+	
 	
 }
